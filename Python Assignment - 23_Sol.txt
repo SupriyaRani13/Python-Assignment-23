@@ -1,0 +1,179 @@
+Python Assignment - 23
+
+1. What is the result of the code, and why?
+def func(a, b=6, c=8):
+print(a, b, c)
+func(1, 2)
+
+Sol: The function func is defined with three parameters: a, b, and c. The parameters b and c have default values of 6 and 8, respectively.
+
+Inside the function, a print statement is used to print the values of a, b, and c.
+
+The function is then called with the arguments 1 and 2 for a and b.
+
+Since you provided values for a and b in the function call, those values will be used for those parameters. However, since you didn't provide a value for c in the function call, the default value of 8 will be used for the parameter c.
+
+Output: 1 2 8
+
+
+2. What is the result of this code, and why?
+def func(a, b, c=5):
+print(a, b, c)
+func(1, c=3, b=2)
+
+Sol: a is assigned the value 1 from the positional argument 1.
+c is assigned the value 3 from the keyword argument c=3.
+b is assigned the value 2 from the keyword argument b=2.
+
+Since all three parameters have values assigned to them, the function will print these values. Therefore, the result of calling func(1, c=3, b=2) will be:-
+
+Output: 1 2 3
+
+
+3. How about this code: what is its result, and why?
+ def func(a, *pargs):
+print(a, pargs)
+func(1, 2, 3)
+
+
+Sol: a is assigned the value 1 from the positional argument 1.
+The special parameter *pargs captures any additional positional arguments passed to the function. In this case, 2 and 3 are captured into pargs, forming a tuple (2, 3).
+Therefore, the result of calling func(1, 2, 3) will be:
+
+Output: 1 (2, 3)
+
+
+4. What does this code print, and why?
+ def func(a, **kargs):
+ print(a, kargs)
+ func(a=1, c=3, b=2)
+
+Sol: The keyword argument a=1 assigns the value 1 to the parameter a.
+The keyword arguments c=3 and b=2 are captured into the kargs dictionary. So, kargs will be {'c': 3, 'b': 2}.
+Therefore, the result of calling func(a=1, c=3, b=2) will be:
+
+Output: 1 {'c': 3, 'b': 2}
+
+
+5. What gets printed by this, and explain?
+def func(a, b, c=8, d=5): print(a, b, c, d)
+func(1, *(5, 6))
+
+Sol: The function is then called with the arguments 1, *(5, 6). The *(5, 6) syntax is used to unpack the tuple (5, 6) into positional arguments. So, effectively, you are passing 1 as the value for a, 5 as the value for b, and 6 as the value for c.
+
+Since you didn't provide a value for the parameter d in the function call, its default value of 5 will be used.
+
+Therefore, the result of calling func(1, *(5, 6)) will be:
+
+Output: 1 5 6 5
+
+
+6. what is the result of this, and explain?
+def func(a, b, c): a = 2; b[0] = 'c'['a'] ='y'
+ l=1; m=[1]; n={'a':0}
+ func(l, m, n)
+
+Sol: The function func is defined with three parameters: a, b, and c.
+
+Inside the function, the value of parameter a is assigned 2.
+
+The first element of the list b is modified to have the value 'c'.
+
+The first character of the string 'c' (which is 'c') is modified to have the value 'y'.
+
+The variable l is assigned the value 1.
+
+The list m is created with a single element 1.
+
+The dictionary n is created with a single key-value pair: 'a': 0.
+
+The function func is called with arguments l, m, and n.
+
+Output: TypeError: 'str' object does not support item assignment
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
